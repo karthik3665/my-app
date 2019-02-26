@@ -14,4 +14,7 @@ node{
     Thanks
     karthik''', cc: '', from: '', replyTo: '', subject: 'Testing the Jenkins email', to: 'karthik.bm179@gmail.com'
    }
+   stage('Slack Notifications'){
+   slackSend baseUrl: 'https://hooks.slack.com/services/', channel: 'java-pipelinedemo', color: 'good', message: 'welcome to Jenkins Slack', teamDomain: 'karthikcloud', tokenCredentialId: 'Slack'
+   }
 }
